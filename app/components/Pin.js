@@ -14,6 +14,8 @@ export default class Pin extends Component {
   render(){
     return(
       <View style={styles.PinContainer}>
+
+        {/*header*/}
         <View style={styles.PinHeader}>
           <View style={styles.UtilityNav}>
             <Back />
@@ -31,17 +33,20 @@ export default class Pin extends Component {
           </View>
         </View>
 
+        {/*la foto*/}
         <View style={styles.PinContent}>
           <Text style={styles.ImagePlaceHolder}>
           </Text>
         </View>
 
+        {/*el comentario*/}
         <View style={styles.PinMeta}>
           <View style={styles.PinMetaTextContainer}>
             <Text style={styles.PinMetaText}>Saved from</Text>
             <Text style={styles.PinMetaText}>website.com</Text>
           </View>
 
+          {/**/}
           <View style={styles.PinButtonContainer}>
             <View style={styles.PinButton}>
               <Text style={styles.PinButtonText}>
@@ -49,6 +54,7 @@ export default class Pin extends Component {
               </Text>
             </View>
           </View>
+        </View>
 
           <View style={styles.PinUser}>
             <View style={styles.PinUserAvatar}>
@@ -67,7 +73,6 @@ export default class Pin extends Component {
             </View>
           </View>
 
-        </View>
 
       </View>
     )
@@ -86,7 +91,7 @@ const styles = StyleSheet.create({
   PinHeader: {
     backgroundColor:'white',
     flexDirection:'row',
-    height:66,
+    flex:1,
     alignItems:'flex-end',
     justifyContent:'space-between',
     padding:10
@@ -103,19 +108,30 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     backgroundColor:'red',
     padding:8,
-    borderRadius:6
+    borderRadius:6,
+    justifyContent:'space-between',
+    width:60
   },
   PinButtonContainer: {
     flexDirection:'row',
     backgroundColor:'white',
-    flex:4,
+    flex:3,
     justifyContent:'flex-end'
   },
   PinButtonText: {
     color:'white'
   },
   PinContent: {
-
+    backgroundColor:'#f9c9cc',
+    flex:3
+  },
+  PinMeta:{
+    flex:1,
+    backgroundColor:'white'
+  },
+  PinUser:{
+    flex:5,
+    backgroundColor:'#cecece',
   },
   ImagePlaceHolder: {
 
