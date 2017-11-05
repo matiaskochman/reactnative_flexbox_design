@@ -78,30 +78,46 @@ export default class Pin extends Component {
 
 const styles = StyleSheet.create({
   PinContainer: {
-    backgroundColor:'#c9c3c3',
-    flexDirection:'column'
+    flex:1,
+    backgroundColor:'#cecece',
+    alignSelf:'stretch'
 
   },
   PinHeader: {
-    flexDirection:'column',
-    backgroundColor:'#d3bcbc'
+    backgroundColor:'white',
+    flexDirection:'row',
+    height:66,
+    alignItems:'flex-end',
+    justifyContent:'space-between',
+    padding:10
+
   },
   UtilityNav: {
-    flex: 5,
+    flexDirection:'row',
+    backgroundColor:'yellow',
+    justifyContent:'space-between',
+    flex:5
+
   },
   PinButton:{
-    flex: 5,
+    flexDirection:'row',
+    backgroundColor:'red',
+    padding:8,
+    borderRadius:6
   },
   PinButtonContainer: {
-    flex: 5,
+    flexDirection:'row',
+    backgroundColor:'white',
+    flex:4,
+    justifyContent:'flex-end'
   },
   PinButtonText: {
-    flex: 5,
+    color:'white'
   },
   PinContent: {
-    flex: 5,
+
   },
   ImagePlaceHolder: {
-    flex: 5,
+
   }
 });
