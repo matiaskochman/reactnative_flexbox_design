@@ -36,6 +36,7 @@ export default class Pin extends Component {
         {/*la foto*/}
         <View style={styles.PinContent}>
           <Text style={styles.ImagePlaceHolder}>
+            PlaceHolder
           </Text>
         </View>
 
@@ -123,17 +124,26 @@ const styles = StyleSheet.create({
   },
   PinContent: {
     backgroundColor:'#f9c9cc',
-    flex:3
+    flex:3,
+    justifyContent:'center',
+    alignItems:'center',
+    paddingLeft:8,
+    paddingRight:8,
+    paddingTop:8
+  },
+  ImagePlaceHolder: {
+    backgroundColor:'#1e1e1e',
+    flex:1,
+    alignSelf:'stretch',
+    borderRadius:7
   },
   PinMeta:{
+    flexDirection:'row',
     flex:1,
     backgroundColor:'white'
   },
   PinUser:{
     flex:5,
     backgroundColor:'#cecece',
-  },
-  ImagePlaceHolder: {
-
   }
 });
