@@ -9,6 +9,7 @@ import {
   Share
 } from './util/icons';
 import UtilityNavButton from './UtilityNavButton';
+import Button from './Button';
 
 export default class Pin extends Component {
 
@@ -26,12 +27,7 @@ export default class Pin extends Component {
 
           </View>
           <View style={styles.PinButtonContainer}>
-            <View style={styles.PinButton}>
-              <PinIcon />
-              <Text style={styles.PinButtonText}>
-                Save
-              </Text>
-            </View>
+            <Button red icon text="Save"/>
           </View>
         </View>
 
@@ -51,9 +47,7 @@ export default class Pin extends Component {
 
           {/**/}
           <View style={styles.PinButtonContainer}>
-            <View style={[styles.PinButton,styles.UtilityButton]}>
-              <Text style={[styles.PinButtonText,styles.UtilityButtonText]}>Visit</Text>
-            </View>
+            <Button text="Visit"/>
           </View>
         </View>
 
