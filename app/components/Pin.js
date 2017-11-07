@@ -8,6 +8,7 @@ import {
   PinIcon,
   Share
 } from './util/icons';
+import UtilityNavButton from './UtilityNavButton';
 
 export default class Pin extends Component {
 
@@ -18,10 +19,11 @@ export default class Pin extends Component {
         {/*header*/}
         <View style={styles.PinHeader}>
           <View style={styles.UtilityNav}>
-            <Back />
-            <Heart />
-            <Share />
-            <More />
+            <UtilityNavButton icon="Back"/>
+            <UtilityNavButton icon="Heart"/>
+            <UtilityNavButton icon="Share"/>
+            <UtilityNavButton icon="More"/>
+
           </View>
           <View style={styles.PinButtonContainer}>
             <View style={styles.PinButton}>
