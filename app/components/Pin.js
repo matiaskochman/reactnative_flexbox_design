@@ -44,35 +44,34 @@ export default class Pin extends Component {
         <View style={styles.PinMeta}>
           <View style={styles.PinMetaTextContainer}>
             <Text style={styles.PinMetaText}>Saved from</Text>
-            <Text style={styles.PinMetaText}>website.com</Text>
+            <Text style={[styles.PinMetaText,styles.TextBold]}>website.com</Text>
           </View>
 
           {/**/}
           <View style={styles.PinButtonContainer}>
-            <View style={styles.PinButton}>
-              <Text style={styles.PinButtonText}>
-                Visit
-              </Text>
+            <View style={[styles.PinButton,styles.UtilityButton]}>
+              <Text style={[styles.PinButtonText,styles.UtilityButtonText]}>Visit</Text>
             </View>
           </View>
         </View>
 
-          <View style={styles.PinUser}>
-            <View style={styles.PinUserAvatar}>
-              <Text>PlaceHolder</Text>
-            </View>
+        {/*el usuario*/}
+        <View style={styles.PinUser}>
+          <View style={styles.PinUserAvatar}>
 
-            <View style={styles.PinUserContainer}>
-              <Text style={styles.PinUserText}>
-                <Text style={styles.TextBold}>User name </Text>
-                 saved to
-                <Text style={styles.TextBold}>GT</Text>
-              </Text>
-              <Text style={styles.PinUserText}>
-                Description : Lorem Ipsum
-              </Text>
-            </View>
           </View>
+
+          <View style={styles.PinUserContainer}>
+            <Text style={styles.PinUserText}>
+              <Text style={styles.TextBold}>User name </Text>
+               saved to
+              <Text style={styles.TextBold}> GT</Text>
+            </Text>
+            <Text style={styles.PinUserText}>
+              Description : Lorem Ipsum
+            </Text>
+          </View>
+        </View>
 
 
       </View>
@@ -115,16 +114,17 @@ const styles = StyleSheet.create({
   },
   PinButtonContainer: {
     flexDirection:'row',
-    backgroundColor:'white',
+    backgroundColor:'blue',
     flex:3,
-    justifyContent:'flex-end'
+    justifyContent:'flex-end',
+
   },
   PinButtonText: {
     color:'white'
   },
   PinContent: {
     backgroundColor:'#f9c9cc',
-    flex:3,
+    flex:4.5,
     justifyContent:'center',
     alignItems:'center',
     paddingLeft:8,
@@ -139,11 +139,44 @@ const styles = StyleSheet.create({
   },
   PinMeta:{
     flexDirection:'row',
+    flex:0.8,
+    backgroundColor:'white',
+    paddingTop:14,
+    paddingBottom:14,
+    paddingRight:8,
+    paddingLeft:8
+  },
+  PinMetaTextContainer:{
     flex:1,
-    backgroundColor:'white'
+    justifyContent:'space-around'
+  },
+  UtilityButton:{
+    backgroundColor:'#cecece',
+    justifyContent:'center',
+    alignItems:'center',
+    height:45
+  },
+  UtilityButtonText:{
+    color:'black',
+    fontWeight:'bold'
   },
   PinUser:{
-    flex:5,
+    flex:5.5,
     backgroundColor:'#cecece',
+    flexDirection:'row',
+    paddingLeft:8,
+    paddingRight:8
+  },
+  PinUserAvatar:{
+    width:50,
+    height:50,
+    borderRadius:25,
+    backgroundColor:'green',
+    paddingLeft:8,
+    paddingRight:8,
+    marginRight:8
+  },
+  TextBold:{
+    fontWeight:'bold'
   }
 });
