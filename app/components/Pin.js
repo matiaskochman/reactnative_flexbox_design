@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View,Text,StyleSheet,Image } from 'react-native';
+import { View,Text,StyleSheet,Image,
+Dimensions } from 'react-native';
 
 import {
   Back,
@@ -12,11 +13,13 @@ import UtilityNavButton from './UtilityNavButton';
 import Button from './Button';
 import LocalImage from './LocalImage';
 
+
+let windowWidth = Dimensions.get('window').width;
 export default class Pin extends Component {
 
   render(){
     return(
-      <View style={styles.PinContainer}>
+      <View style={[styles.PinContainer,{width:windowWidth/this.props.columns}]}>
 
         {/*header*/}
         <View style={styles.PinHeader}>
@@ -37,16 +40,8 @@ export default class Pin extends Component {
         <LocalImage
           source={this.props.pinSource.imageSource}
           originalWidth={this.props.pinSource.originalWidth}
-          originalHeight={this.props.pinSource.originalHeight}/>
-
-          {
-            /*
-            <LocalImage
-              source={require('../images/haus.jpg')}
-              originalWidth={1024}
-              originalHeight={576}/>
-            */
-          }
+          originalHeight={this.props.pinSource.originalHeight}
+          columns={this.props.columns}/>
 
         </View>
 
