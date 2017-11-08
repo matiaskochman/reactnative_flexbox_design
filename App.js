@@ -9,17 +9,40 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
 import Pin from './app/components/Pin';
 
 export default class App extends Component<{}> {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      pin:{
+        hotel1:{
+          imageSource:require('./app/images/hotel1.jpg'),
+          originalWidth:337,
+          originalHeight:450
+        },
+        haus:{
+          imageSource:require('./app/images/haus.jpg'),
+          originalWidth:1024,
+          originalHeight:576
+        }
+
+      }
+    }
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Pin />
-      </View>
+      <ScrollView style={styles.container}>
+        <Pin pinSource={this.state.pin.hotel1}/>
+        <Pin pinSource={this.state.pin.haus}/>
+      </ScrollView>
     )
 
   }
@@ -28,8 +51,8 @@ export default class App extends Component<{}> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    //justifyContent: 'center',
+    //alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {

@@ -34,11 +34,20 @@ export default class Pin extends Component {
 
         {/*la foto*/}
         <View style={styles.PinContent}>
+        <LocalImage
+          source={this.props.pinSource.imageSource}
+          originalWidth={this.props.pinSource.originalWidth}
+          originalHeight={this.props.pinSource.originalHeight}/>
 
-          <LocalImage
-            source={require('../images/haus.jpg')}
-            originalWidth={1024}
-            originalHeight={576}/>
+          {
+            /*
+            <LocalImage
+              source={require('../images/haus.jpg')}
+              originalWidth={1024}
+              originalHeight={576}/>
+            */
+          }
+
         </View>
 
         {/*el comentario*/}
@@ -82,15 +91,16 @@ export default class Pin extends Component {
 
 const styles = StyleSheet.create({
   PinContainer: {
-    flex:1,
+    //flex:1,
+    //alignSelf:'stretch'
     backgroundColor:'#cecece',
-    alignSelf:'stretch'
 
   },
   PinHeader: {
+    //flex:1,
+    minHeight:60, //minWidth maxHeight maxWidth
     backgroundColor:'white',
     flexDirection:'row',
-    flex:1,
     alignItems:'flex-end',
     justifyContent:'space-between',
     padding:10
@@ -138,7 +148,8 @@ const styles = StyleSheet.create({
   },
   PinMeta:{
     flexDirection:'row',
-    flex:0.8,
+    minHeight:60,
+    //flex:0.8,
     backgroundColor:'white',
     paddingTop:14,
     paddingBottom:14,
@@ -158,6 +169,9 @@ const styles = StyleSheet.create({
   UtilityButtonText:{
     color:'black',
     fontWeight:'bold'
+  },
+  PinUserContainer:{
+    backgroundColor:'red'
   },
   PinUser:{
     flex:5.5,
