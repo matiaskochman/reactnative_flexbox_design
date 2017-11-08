@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View,Text,StyleSheet } from 'react-native';
+import { View,Text,StyleSheet,Image } from 'react-native';
 
 import {
   Back,
@@ -10,6 +10,7 @@ import {
 } from './util/icons';
 import UtilityNavButton from './UtilityNavButton';
 import Button from './Button';
+import LocalImage from './LocalImage';
 
 export default class Pin extends Component {
 
@@ -33,9 +34,11 @@ export default class Pin extends Component {
 
         {/*la foto*/}
         <View style={styles.PinContent}>
-          <Text style={styles.ImagePlaceHolder}>
-            PlaceHolder
-          </Text>
+
+          <LocalImage
+            source={require('../images/haus.jpg')}
+            originalWidth={1024}
+            originalHeight={576}/>
         </View>
 
         {/*el comentario*/}
@@ -120,7 +123,7 @@ const styles = StyleSheet.create({
   },
   PinContent: {
     //backgroundColor:'#f9c9cc',
-    flex:4.5,
+    //flex:4.5,
     justifyContent:'center',
     alignItems:'center',
     paddingLeft:8,

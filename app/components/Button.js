@@ -20,7 +20,7 @@ export default class Pin extends Component {
     if(this.props.red){
       bgColor='red';
       textColor='white';
-      textWeight = '';
+      textWeight = 'normal';
     } else{
       bgColor:'#cecece';
     }
