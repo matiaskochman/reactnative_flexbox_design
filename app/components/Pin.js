@@ -27,7 +27,7 @@ export default class Pin extends Component {
 
           </View>
           <View style={styles.PinButtonContainer}>
-            <Button red icon text="Save"/>
+            <Button red={true} icon text="Save"/>
           </View>
         </View>
 
@@ -47,7 +47,7 @@ export default class Pin extends Component {
 
           {/**/}
           <View style={styles.PinButtonContainer}>
-            <Button text="Visit"/>
+            <Button red={false} text="Visit"/>
           </View>
         </View>
 
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   },
   UtilityNav: {
     flexDirection:'row',
-    backgroundColor:'yellow',
+    //backgroundColor:'yellow',
     justifyContent:'space-between',
     flex:5
 
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   PinButtonContainer: {
     flexDirection:'row',
-    backgroundColor:'blue',
+    //backgroundColor:'blue',
     flex:3,
     justifyContent:'flex-end',
 
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     color:'white'
   },
   PinContent: {
-    backgroundColor:'#f9c9cc',
+    //backgroundColor:'#f9c9cc',
     flex:4.5,
     justifyContent:'center',
     alignItems:'center',
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     justifyContent:'space-around'
   },
   UtilityButton:{
-    backgroundColor:'#cecece',
+    //backgroundColor:'#cecece',
     justifyContent:'center',
     alignItems:'center',
     height:45

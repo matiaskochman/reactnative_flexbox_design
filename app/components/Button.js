@@ -1,3 +1,4 @@
+'use strict'
 import React, { Component } from 'react';
 import { View,Text,StyleSheet } from 'react-native';
 
@@ -13,10 +14,21 @@ import UtilityNavButton from './UtilityNavButton';
 export default class Pin extends Component {
 
   render(){
+    let bgColor = '#cecece';
+    let textWeight = 'bold';
+    let textColor = 'black';
+    if(this.props.red){
+      bgColor='red';
+      textColor='white';
+      textWeight = '';
+    } else{
+      bgColor:'#cecece';
+    }
+
     return(
-      <View style={styles.PinButton}>
+      <View style={[styles.PinButton,{backgroundColor:bgColor}]}>
         <PinIcon />
-        <Text style={styles.PinButtonText}>Save</Text>
+        <Text style={[styles.PinButtonText,{fontWeight:textWeight,color:textColor}]}>{this.props.text}</Text>
       </View>
     )
 
